@@ -22,7 +22,7 @@ class SubscribeFormServiceProvider extends ServiceProvider
         ], 'config');  
         $this->publishes([
             __DIR__ . '/migrations/' => base_path('/database/migrations')
-        ], 'migrations')
+        ], 'migrations');
         $this->publishes([
             __DIR__.'/js/subscribe.js' => public_path('vendor/subscribe/subscribe.js')
         ], 'javascript');
