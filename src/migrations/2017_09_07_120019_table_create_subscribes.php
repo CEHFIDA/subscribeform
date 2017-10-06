@@ -15,7 +15,7 @@ class TableCreateSubscribes extends Migration
     {
         if(!Schema::hasTable('subscribes')) {
             Schema::create('subscribes', function (Blueprint $table) {
-                $table->increments('id')->first();
+                $table->increments('id');
                 $table->string('email');
                 $table->timestamps();
                 $table->softDeletes();
