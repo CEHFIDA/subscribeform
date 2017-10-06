@@ -21,8 +21,8 @@ class SubscribeFormServiceProvider extends ServiceProvider
             __DIR__.'/configs/subscribeform.php' => config_path('subscribeform.php')
         ], 'config');  
         $this->publishes([
-            __DIR__.'/migrations/' => database_path('/database/migrations/')
-        ], 'migrations');
+            __DIR__ . '/migrations/' => base_path('/database/migrations')
+        ], 'migrations')
         $this->publishes([
             __DIR__.'/js/subscribe.js' => public_path('vendor/subscribe/subscribe.js')
         ], 'javascript');
