@@ -1,5 +1,5 @@
 # Laravel 5 subscribeform
-subscribeform - a package to newsletter subscription
+subscribeform - a package serves as a subscription to notifications
 
 ## How to install
 
