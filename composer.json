@@ -1,7 +1,7 @@
 {
   "name": "selfreliance/subscribeform",
   "type": "library",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Subscribe Form for Laravel",
   "keywords": ["subscribeform", "laravel"],
   "homepage": "https://github.com/selfrelianceme/subscribeform",
@@ -26,6 +26,6 @@
     "phpunit/phpunit": "~4.8"
   },
   "autoload": {
-    "psr-4": {"Selfreliance\\subscribeform\\": "src/"}
+    "psr-4": {"Selfreliance\\Subscribeform\\": "src/"}
   }
 }
