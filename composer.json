@@ -15,7 +15,7 @@
   "extra": {
     "laravel": {
         "providers": [
-            "Selfreliance\\Subscribeform\\SubscribeFormServiceProvider"
+            "Selfreliance\\subscribeform\\SubscribeFormServiceProvider"
         ]
      }
   },
@@ -26,6 +26,6 @@
     "phpunit/phpunit": "~4.8"
   },
   "autoload": {
-    "psr-4": {"Selfreliance\\Subscribeform\\": "src/"}
+    "psr-4": {"Selfreliance\\subscribeform\\": "src/"}
   }
 }
