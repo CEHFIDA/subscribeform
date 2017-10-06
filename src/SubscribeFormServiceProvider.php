@@ -15,7 +15,7 @@ class SubscribeFormServiceProvider extends ServiceProvider
     {
         //
         include __DIR__.'/routes.php';
-        $this->app->make('Selfreliance\subscribeform\SubscribeFormController');
+        $this->app->make('Selfreliance\Subscribeform\SubscribeFormController');
         $this->loadMigrationsFrom(__DIR__.'/migrations');
         $this->publishes([
             __DIR__.'/configs/subscribeform.php' => config_path('subscribeform.php')
