@@ -31,8 +31,8 @@ class SubscribeFormController extends Controller
             ];
         }
 
-        return response()->json([
+        return response()->json(
             $data
-        ]);
+        );
     }
 }
