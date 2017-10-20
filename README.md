@@ -10,7 +10,7 @@ composer require selfreliance/subscribeform
 
 Config, migrations and javascript
 ```php
-php artisan vendor:publish --provider="Selfreliance\Subscribeform\SubscribeFormServiceProvider" --force
+php artisan vendor:publish --provider="Selfreliance\subscribeform\SubscribeFormServiceProvider" --force
 ```
 
 And do not forget about 
