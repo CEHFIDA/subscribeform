@@ -14,7 +14,7 @@ class SubscribeFormController extends Controller
             'email' => 'required|email'
         ]);
 
-        $check_mail = Subscribe::where('email', $request->input('email'));
+        $check_mail = Subscribe::where('email', $request->input('email'))->first();
         if(!$check_mail)
         {
         	$model->email = $request->input('email');
