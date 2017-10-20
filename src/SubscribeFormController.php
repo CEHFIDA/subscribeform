@@ -18,7 +18,8 @@ class SubscribeFormController extends Controller
         if(!$check_mail)
         {
         	$model->email = $request->input('email');
-        	if($model->save()){
+        	if($model->save())
+            {
                 $data = [
                     'success' => true,
                     'message' => "Email успешно подписан на рассылку"
