@@ -1,5 +1,5 @@
 # Laravel 5 subscribeform
-subscribeform - a package to newsletter subscription
+subscribeform - a package serves as a subscription to notifications
 
 ## How to install
 
@@ -10,9 +10,7 @@ composer require selfreliance/subscribeform
 
 Config, migrations and javascript
 ```php
-php artisan vendor:publish --provider="Selfreliance\Subscribeform\SubscribeFormServiceProvider" --tag="config"
-php artisan vendor:publish --provider="Selfreliance\Subscribeform\SubscribeFormServiceProvider" --tag="migrations" --force
-php artisan vendor:publish --provider="Selfreliance\Subscribeform\SubscribeFormServiceProvider" --tag="javascript" --force
+php artisan vendor:publish --provider="Selfreliance\Subscribeform\SubscribeFormServiceProvider" --force
 ```
 
 And do not forget about 
@@ -22,7 +20,7 @@ php artisan migrate
 
 Connect javascript
 ```html
-<script src="{{ asset('vendor/subscribeform/subscribe.js') }}"></script>
+<script src="{{ asset('js/core.js') }}"></script>
 ```
 
 ## Usage
@@ -30,9 +28,4 @@ Connect javascript
 ```
 	Transimt data to url (/subscribe) - method POST:
 		- email (required)
-```
-
-Do not forget about result
-```html
-	<div id = "result"></div>
 ```

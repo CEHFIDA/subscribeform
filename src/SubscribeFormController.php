@@ -4,7 +4,7 @@ namespace Selfreliance\subscribeform;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Selfreliance\Subscribeform\Models\Contact;
+use Selfreliance\Subscribeform\Models\Subscribe;
 
 class SubscribeFormController extends Controller
 {
@@ -14,13 +14,27 @@ class SubscribeFormController extends Controller
             'email' => 'required|email'
         ]);
 
-        $check_mail = \DB::table('subscribes')->where('email', $request->input('email'))->first();
+        $check_mail = Subscribe::where('email', $request->input('email'))->first();
         if(!$check_mail)
         {
-	        $model->email = $request->input('email');
-	        $model->save();
-            echo '<div class="alert alert-success">Вы успешно подписались на рассылку!</div>';
+        	$model->email = $request->input('email');
+        	if($model->save()){
+                $data = [
+                    'success' => true,
+                    'message' => "Email успешно подписан на рассылку"
+                ];
+            }
         }
-        else echo '<div class="alert alert-danger">Данный email уже подписан на рассылку!</div>';
+        else
+        {
+            $data = [
+                'success' => false,
+                'message' => "Данный email уже был ранее подписан на рассылку"
+            ];
+        }
+
+        return response()->json(
+            $data
+        );
     }
 }

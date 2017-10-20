@@ -15,16 +15,16 @@ class SubscribeFormServiceProvider extends ServiceProvider
     {
         //
         include __DIR__.'/routes.php';
-        $this->app->make('Selfreliance\subscribeform\SubscribeFormController');
+        $this->app->make('Selfreliance\Subscribeform\SubscribeFormController');
         $this->loadMigrationsFrom(__DIR__.'/migrations');
         $this->publishes([
             __DIR__.'/config/subscribeform.php' => config_path('subscribeform.php')
         ], 'config');  
         $this->publishes([
-            __DIR__.'/migrations/' => database_path('/database/migrations/')
+            __DIR__ . '/migrations/' => database_path('migrations')
         ], 'migrations');
         $this->publishes([
-            __DIR__.'/js/subscribe.js' => public_path('vendor/subscribe/subscribe.js')
+            __DIR__.'/js/core.js' => public_path('js/core.js')
         ], 'javascript');
     }
 
