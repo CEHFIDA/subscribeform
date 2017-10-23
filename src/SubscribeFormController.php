@@ -15,7 +15,7 @@ class SubscribeFormController extends Controller
     */
     public static function subscribed($email)
     {
-        $check_mail = Subscribe::where('email', $request->input('email'))->first();
+        $check_mail = Subscribe::where('email', $email)->first();
         return ($check_mail) ? true : false;
     }
 
