@@ -13,19 +13,27 @@ Config, migrations and javascript
 php artisan vendor:publish --provider="Selfreliance\subscribeform\SubscribeFormServiceProvider" --force
 ```
 
-And do not forget about 
-```php 
-php artisan migrate 
-```
-
 Connect javascript
 ```html
 <script src="{{ asset('js/core.js') }}"></script>
 ```
 
+And do not forget about 
+```php 
+php artisan migrate 
+```
+
+## Functions
+
+```php
+use Selfreliance\subscribeform\SubscribeFormController;
+
+SubscribeFormController::subscribed('example@gmail.com'); // check if subscribed return true or false
+```
+
 ## Usage
 
 ```
-	Transimt data to url (/subscribe) - method POST:
+	Transimt data to url (/subscribe or from config subscribeform) - method POST:
 		- email (required)
 ```
